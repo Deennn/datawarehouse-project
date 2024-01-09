@@ -10,9 +10,3 @@ build:
 
 stop:
 	docker compose down
-
-  <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
