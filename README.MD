@@ -41,6 +41,10 @@ Run Via Docker
   - docker compose up 
 ```
 
+```http
+  POST /api/v1/fx-deals/save
+```
+
 ```bash
 
 curl --location 'http://localhost:8080/api/v1/fx-deal/save' \
@@ -54,10 +58,6 @@ curl --location 'http://localhost:8080/api/v1/fx-deal/save' \
   "deal_timestamp": "2022-01-08 12:30:45"
 }'
 
-```
-
-```http
-  POST /api/v1/fx-deals/save
 ```
 #### Request payload
 ```
@@ -92,39 +92,12 @@ curl --location 'http://localhost:8080/api/v1/fx-deal/save' \
   GET /api/v1/fx-deals/${id}
 ```
 
-#### Request payload
-``` 
-localhost:8080/api/v1/fx-deal/qwudsj-123
-```
-#### Response
-```
-{
-    "message": "success",
-    "success": true,
-    "payload": {
-        "dealUniqueId": "yttr-8954fg",
-        "fromCurrencyCode": "NGN",
-        "orderingCurrency": "USD",
-        "toCurrencyCode": "USD",
-        "dealAmountInOrderingCurrency": 53.79,
-        "dealTimestamp": "2022-01-08T12:30:45"
-    }
-}
-```
-
-#### Get FX Deal
-
 ```bash
 curl --location 'http://localhost:8080/api/v1/fx-deal/yttr-8954fg'
-```
-
-```http
-  GET /api/v1/fx-deals/${id}
-```
 
 #### Request payload
 ``` 
-localhost:8080/api/v1/fx-deal/qwudsj-123
+localhost:8080/api/v1/fx-deal/yttr-8954fg
 ```
 #### Response
 ```
@@ -140,19 +113,18 @@ localhost:8080/api/v1/fx-deal/qwudsj-123
         "dealTimestamp": "2022-01-08T12:30:45"
     }
 }
+
+```http
+  GET /api/v1/fx-deals
 ```
 
 ### Get all FX Deals
-
-
-#### Request
-
 
 ```bash
 curl --location 'http://localhost:8080/api/v1/fx-deals?pageNo=0&pageSize=10&sortBy=id&sortDir=asc'
 ```
 
-
+#### Request
 ``` 
 localhost:8080/api/v1/fx-deals
 ```
