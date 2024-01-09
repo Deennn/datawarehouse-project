@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: data-warehouse
+  datasource:
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/data-warehouse-db}
+    username: ${POSTGRES_USERNAME:myuser}
+    password: ${POSTGRES_PASSWORD:mysecretpassword}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+
+
+
