@@ -42,7 +42,7 @@ Run Via Docker
 ```
 
 ```http
-  POST /api/v1/fx-deals/save
+  POST /api/v1/fx-deal/save
 ```
 
 ```bash
@@ -89,7 +89,7 @@ curl --location 'http://localhost:8080/api/v1/fx-deal/save' \
 #### Get FX Deal
 
 ```http
-  GET /api/v1/fx-deals/${id}
+  GET /api/v1/fx-deal/${id}
 ```
 
 ```bash
